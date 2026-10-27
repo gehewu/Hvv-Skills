@@ -42,18 +42,22 @@ hvv-skills/
 
 ### 方式 A：项目级（推荐）
 ```bash
-ln -s /d/MCP/hvv-skills /d/MCP/.claude/skills/hvv     # Linux/Git Bash
+REPO=/path/to/Hvv-Skills          # 换成你的仓库目录
+mkdir -p .claude/skills
+ln -s "$REPO" .claude/skills/hvv  # Linux/Git Bash
 # 或
-cp -r /d/MCP/hvv-skills /d/MCP/.claude/skills/hvv
+cp -r "$REPO" .claude/skills/hvv
 ```
 
 ### 方式 B：用户级
 ```bash
-cp -r /d/MCP/hvv-skills ~/.claude/skills/hvv
+REPO=/path/to/Hvv-Skills          # 换成你的仓库目录
+mkdir -p ~/.claude/skills
+cp -r "$REPO" ~/.claude/skills/hvv
 ```
 
 ### 方式 C：不安装，直接读
-在对话里让 Agent 读取 `D:\MCP\hvv-skills\SKILL.md`，按其流程执行。
+在对话里让 Agent 读取仓库根目录的 `SKILL.md`，按其流程执行。
 
 ---
 
